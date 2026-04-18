@@ -1,0 +1,16 @@
+name: Disparar Robo do Telegram
+
+on:
+  schedule:
+    # O horário aqui é em UTC. 11:00 UTC = 08:00 em São Paulo
+    - cron: '45 12 * * *'
+  workflow_dispatch: # Permite rodar o botão manualmente no site do GitHub
+
+jobs:
+  acordar_e_cobrar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Chamada na API
+        run: |
+          echo "Acordando o servidor e disparando as cobrancas..."
+          curl -s https://backend-embalagens.onrender.com/robo/cobrar-hoje
