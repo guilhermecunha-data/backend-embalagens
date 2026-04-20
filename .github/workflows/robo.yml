@@ -3,7 +3,7 @@ name: Disparar Robo do Telegram
 on:
   schedule:
     # O horário aqui é em UTC. 10:00 UTC = 07:00 em São Paulo
-    - cron: '0 10 * * *'
+    - cron: '0 4 * * *'
   workflow_dispatch: # Permite rodar o botão manualmente no site do GitHub
 
 jobs:
